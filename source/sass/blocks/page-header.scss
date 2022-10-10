@@ -1,0 +1,72 @@
+.page-header {
+  position: relative;
+  padding: 28px 0 50px;
+  color: $color-default-white;
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+
+  @include vp-1199 {
+    padding-top: 36px;
+  }
+
+  @include vp-767 {
+    padding-top: 18px;
+  }
+}
+
+.page-header a {
+  color: $color-default-white;
+}
+
+.page-header__logo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-header__logo-wrapper img {
+  margin-right: auto;
+  @include vp-1199 {
+    width: 82px;
+  }
+
+  @include vp-767 {
+    width: 68px;
+  }
+}
+
+.page-header__logo-wrapper a {
+  margin-left: 10px;
+  font-family: $ff-bebas-neue;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.page-header__social-wrapper {
+  position: absolute;
+  right: 92px;
+  bottom: 81px;
+  text-align: right;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.page-header__social-wrapper a {
+  display: block;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}

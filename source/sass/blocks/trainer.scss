@@ -1,0 +1,143 @@
+.trainer {
+  padding-top: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+}
+
+.trainer h2 {
+ margin-bottom: 54px;
+ padding-left: 73px;
+ font-size: 49px;
+ line-height: 49px;
+ letter-spacing: 0.05em;
+
+ @include vp-1199 {
+  padding: 0;
+  margin-bottom: 44px;
+  font-size: 42px;
+  line-height: 42px;
+  text-align: center;
+ }
+}
+
+.trainer__slider.swiper-container {
+ padding: 0 73px;
+}
+
+.trainer__slide.swiper-slide {
+  position: relative;
+  width: 260px;
+
+  @include vp-1199 {
+    width: 268px;
+    height: 294px;
+   }
+
+   @include vp-767 {
+    width: 226px;
+   }
+}
+
+.trainer__slide:focus-visible {
+  outline: none;
+}
+
+@media (min-width: 1200px) {
+  .trainer__slide:hover .trainer__info,
+  .trainer__slide:focus .trainer__info {
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(16, 38, 84, 0.89);
+  }
+
+  .trainer__slide:hover .trainer__info-text,
+  .trainer__slide:focus .trainer__info-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include vp-1199 {
+  .trainer__slide:focus .trainer__info {
+    bottom: 0;
+
+    height: 100%;
+    background-color: rgba(16, 38, 84, 0.89);
+  }
+
+  .trainer__slide:focus .trainer__info-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trainer__slide:focus h3 {
+    padding-left: 0;
+  }
+}
+
+.trainer__slide ul {
+  padding-left: 16px;
+  margin-left: 44px;
+  list-style-type: disc;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: start;
+}
+
+.trainer__slide li {
+  margin-bottom: 13px;
+}
+
+.trainer__slide h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1199 {
+    padding-left: 20px;
+  }
+}
+
+.trainer__slide p {
+  margin: 0;
+  margin-top: -4px;
+  margin-bottom: 32px;
+}
+
+.trainer__slide img {
+ width: 260px;
+ object-fit: cover;
+
+ @include vp-1199 {
+  width: 268px;
+  height: 294px;
+ }
+
+ @include vp-767 {
+  width: 226px;
+ }
+}
+
+.trainer__info {
+  position: absolute;
+  bottom: 12px;
+  width: inherit;
+  padding: 52px 10px 10px;
+  text-align: center;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 52px 20px 10px 10px;
+  }
+}
+
+.trainer__info-text {
+ display: none;
+}
+
+.trainer__button.swiper-button-prev::after,
+.trainer__button.swiper-button-next::after {
+  font-size: 32px;
+  color: #afafaf;
+}
