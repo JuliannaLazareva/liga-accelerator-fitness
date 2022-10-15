@@ -11,7 +11,7 @@
 
   @include vp-767 {
     padding-top: 67px;
-    padding-bottom: 70px;
+    padding-bottom: 74px;
   }
 }
 
@@ -22,15 +22,14 @@
   width: 287px;
   height: 420px;
   margin-bottom: -50px;
-  background-image: url('../img/gym_disc.png');
+  background-image: url("../img/gym_disc.png");
   background-position: left top;
   background-repeat: no-repeat;
-  background-position: left top;
   background-size: 153%;
   content: "";
 
   @include retina {
-    background-image: url('../img/gym_disc@2x.png');
+    background-image: url("../img/gym_disc@2x.png");
   }
 
   @include vp-1199 {
@@ -89,8 +88,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 390px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   list-style-type: none;
 
   @include vp-1199 {
@@ -178,11 +176,17 @@
       bottom: -7px;
     }
   }
+
+  &:focus-visible {
+    outline: none;
+    border: none;
+  }
 }
 
 .season-tickets__tabs-button:not(.season-tickets__tabs-button--active):hover,
 .season-tickets__tabs-button:not(.season-tickets__tabs-button--active):focus {
   background-color: #eeeeee;
+  outline: none;
 }
 
 .season-tickets__list {
@@ -208,10 +212,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   min-width: 360px;
   width: 100%;
-  padding: 57px 20px 63px;
+  padding: 57px 20px 54px;
   margin: 0 auto;
   background-color: $color-default-white;
   border: 7px solid transparent;
@@ -223,13 +228,18 @@
 
   @include vp-767 {
     min-width: 290px;
-    padding: 44px 20px 49px;
+    padding: 44px 20px 37px;
+  }
+
+  &:focus-visible {
+    outline: none;
   }
 }
 
 @media (min-width: 1200px) {
   .season-tickets__card:hover,
   .season-tickets__card:focus,
+  .season-tickets__card:focus-within,
   .season-tickets__card:active {
     border: 7px solid $color-crimson;
     border-image: $red-to-blue;
@@ -241,6 +251,13 @@
     color: $color-default-white;
     background: $red-to-right;
     outline: none;
+  }
+
+  .season-tickets__card:focus-within .season-tickets__buy-button:focus {
+    color: $color-default-white;
+    background: $red-to-right;
+    outline: none;
+    opacity: 0.8;
   }
 }
 
@@ -297,7 +314,6 @@
 .season-tickets__price-item {
   position: relative;
   min-width: 166px;
-  padding: 0;
   margin: 0 auto;
 }
 
@@ -346,7 +362,7 @@
   right: 0;
   width: 30px;
   height: 42px;
-  background-image: url('../img/ruble.svg');
+  background-image: url("../img/ruble.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   content: "";
@@ -370,6 +386,7 @@
 .season-tickets__buy-button {
   display: block;
   padding: 24px 44px;
+  margin-bottom: 10px;
   text-align: center;
   color: $color-sapphire;
   border: none;

@@ -19,8 +19,10 @@
     <header class="page-header">
       <div class="container page-header__wrapper">
         <div class="page-header__logo-wrapper">
-          <img src="img/logo.svg" alt="SYPERGYM" width="89" height="20">
-          <a href="tel:88005555555">8-800-555-55-55</a>
+          <a class="page-header__logo">
+            <img src="img/logo.svg" alt="SYPERGYM" width="89" height="20">
+          </a>
+          <a class="page-header__phone" href="tel:88005555555">8-800-555-55-55</a>
         </div>
         <div class="page-header__social-wrapper">
           <ul class="page-header__social-list">
@@ -105,17 +107,19 @@
               <div class="season-tickets__tabs-panel season-tickets__tabs-panel--show">
                 <ul class="season-tickets__list">
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>С тренером</h3>
-                    <p>12 занятий</p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>5000</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>5000</span>
-                      </li>
-                    </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <div class="season-tickets__card-wrap">
+                      <h3>С тренером</h3>
+                      <p>12 занятий</p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span>5000</span>
+                        </li>
+                        <li class="season-tickets__price-item">
+                          <span>5000</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
                     <h3>Дневной</h3>
@@ -128,7 +132,7 @@
                         <span>1700</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
                     <h3>Полный день</h3>
@@ -141,7 +145,7 @@
                         <span>2700</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                 </ul>
               </div>
@@ -158,7 +162,7 @@
                         <span>15000</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
                     <h3>Дневной</h3>
@@ -171,7 +175,7 @@
                         <span>11700</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
                     <h3>Полный день</h3>
@@ -184,7 +188,7 @@
                         <span>12700</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                 </ul>
               </div>
@@ -201,7 +205,7 @@
                         <span>25000</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
                     <h3>Дневной</h3>
@@ -214,7 +218,7 @@
                         <span>21700</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
                     <h3>Полный день</h3>
@@ -227,7 +231,7 @@
                         <span>22700</span>
                       </li>
                     </ul>
-                    <a class="season-tickets__buy-button btn">купить абонемент</a>
+                    <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                 </ul>
               </div>
@@ -431,84 +435,233 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="trainer__button swiper-button-prev">
-            <span class="visually-hidden">Предыдущее фото</span>
-          </div>
-          <div class="trainer__button swiper-button-next">
-            <span class="visually-hidden">Следующее фото</span>
+            <div class="trainer__button trainer__button--prev swiper-button-prev">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </div>
+            <div class="trainer__button trainer__button--next swiper-button-next">
+              <span class="visually-hidden">Следующее фото</span>
+            </div>
           </div>
         </div>
-
-
-      <!--
-          <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+      </section>
+      <section class="advantages">
+        <h2>Наши преимущества</h2>
+        <div class="advantages__wrapper">
+          <div class="advantages__block advantages__block--area">
+            <dl>
+              <dt>900</dt>
+              <dd>кв/м</dd>
+            </dl>
+            <div class="advantages__text-wrapper">
+              <h3>Площадь</h3>
+              <p>Занимайтесь без очередей и&nbsp;толпучки</p>
+            </div>
+          </div>
+          <div class="advantages__block advantages__block--parking">
+            <dl>
+              <dt>70</dt>
+              <dd>машин</dd>
+            </dl>
+            <div class="advantages__text-wrapper">
+              <h3>Собственная парковка</h3>
+              <p>Вы всегда найдете место для своей машины на&nbsp;нашей парковке</p>
+            </div>
+          </div>
+          <div class="advantages__block advantages__block--simulators">
+            <dl>
+              <dt>100</dt>
+              <dd>Тренажеров</dd>
+            </dl>
+            <p>Современные тренажеры на&nbsp;все группы мышц</p>
+          </div>
+          <div class="advantages__block advantages__block--comfort">
+            <dl>
+              <dt>350</dt>
+              <dd>мест</dd>
+            </dl>
+            <div class="advantages__text-wrapper">
+              <h3>Комфорт</h3>
+              <p>Просторные раздевалки,
+                душевые, фен, Wi-Fi, кулеры</p>
+            </div>
+          </div>
+          <div class="advantages__block advantages__block--experience">
+            <dl>
+              <dt>5+</dt>
+              <dd>лет</dd>
+            </dl>
+            <div class="advantages__text-wrapper">
+              <h3>Тренерский опыт</h3>
+              <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="action">
+        <h2>Акции</h2>
+        <div class="action__wrapper">
+          <div class="action__block action__block--main">
+            <div class="action__card action__card--main">
+              <h3>Год</h3>
+              <span>4999</span>
+              <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
+              <a class="action__button btn" href="#">подробнее</a>
+            </div>
+            <div class="action__image">
+            </div>
+          </div>
+          <div class="action__block">
+            <div class="action__card">
+              <h3>Месяц бесплатно</h3>
+              <p>Приведи друга, получи<br> абонемент в&nbsp;подарок</p>
+              <a class="action__button btn" href="#">подробнее</a>
+            </div>
+            <div class="action__card">
+              <h3>Скидка 20%</h3>
+              <p>Корпоративный фитнес с&nbsp;командой</p>
+              <a class="action__button btn" href="#">подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <h2>Отзывы</h2>
+        <div class="swiper">
+          <div class="swiper-container reviews__slider">
+            <div class="swiper-wrapper reviews__slider-wrapper">
+              <div class="reviews__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/review_foto.webp 1x, img/review_foto@2x.webp 2x">
+                  <!-- 1x: 80px; 2x: 160px -->
+                  <img src="img/review_foto.png" srcset="img/review_foto@2x.png" alt="Анна Орлова" width="80"
+                    height="80">
+                </picture>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в&nbsp;SuperClub уже больше года. Нравится, что&nbsp;в&nbsp;клубе всегда чисто, тренажеры
+                  обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+              <div class="reviews__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="img/review_foto.webp 1x, img/review_foto@2x.webp 2x">
+                  <!-- 1x: 80px; 2x: 160px -->
+                  <img src="img/review_foto.png" srcset="img/review_foto@2x.png" alt="Анна Орлова" width="80"
+                    height="80">
+                </picture>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в&nbsp;SuperClub уже больше года. Нравится, что&nbsp;в&nbsp;клубе всегда чисто, тренажеры
+                  обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </div>
+            </div>
+            <div class="reviews__button swiper-button-prev">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </div>
+            <div class="reviews__button swiper-button-next">
+              <span class="visually-hidden">Следующее фото</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="columns">
+        <section class="promo">
+          <h2>Бесплатное занятие</h2>
+          <form class="promo__form" action="https://echo.htmlacademy.ru" method="post">
+            <label for="user-name" class="visually-hidden">Ваше имя:</label>
+            <input id="user-name" type="text" name="user-name" placeholder="Имя" required>
+            <label for="user-phone" class="visually-hidden">Ваш телефон:</label>
+            <input id="user-phone" type="tel" name="tel" value="" placeholder="Телефон" maxlength="18" required>
+            <button class="promo__button btn" type="submit">отправить</button>
+          </form>
+        </section>
+        <section class="contacts">
+          <h2>Контакты</h2>
+          <div class="contacts__wrapper">
+            <div class="contacts__block">
+              <div>
+                <h3>Адрес:</h3>
+                <address>г. Омск, ул. 60 лет Октября, 7</address>
+              </div>
+              <div>
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </div>
+            </div>
+            <div class="contacts__block">
+              <div>
+                <h3>Телефон:</h3>
+                <a href="tel:88005555555">8-800-555-55-55</a>
+              </div>
+              <div>
+                <h3>Email:</h3>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </div>
+            </div>
           </div>
         </section>
-        -->
-
+      </div>
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo-wrapper">
+          <a class="page-footer__logo" href="#">
+            <img src="img/logo.svg" alt="SYPERGYM" width="89" height="20">
+          </a>
+        </div>
+        <div class="page-footer__nav">
+          <ul class="page-footer__nav-list page-footer__nav-list--left-column">
+            <li class="page-footer__nav-item">
+              <a href="#">Услуги</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#">Абонементы</a>
+            </li>
+          </ul>
+          <ul class="page-footer__nav-list page-footer__nav-list--right-column">
+            <li class="page-footer__nav-item">
+              <a href="#">Акции</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#">Тренеры</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#">Расписание</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__social">
+          <ul>
+            <li>
+              <a href="#">
+                <svg width="25" height="25">
+                  <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">Мы вКонтакте</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="25" height="25">
+                  <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+                </svg>
+                <span class="visually-hidden">Мы в Одноклассники</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#icon-reddit"></use>
+                </svg>
+                <span class="visually-hidden">Мы в Reddit</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </div>
-
-  <!-- Модалки -->
-  <!--
-      <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  -->
-
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
-  <!--<script>
-    var mySwiper = new Swiper('.swiper', {
-      loop: true,
-      navigation: {
-        nextEl: '.slider__button--next',
-        prevEl: '.slider__button--prev'
-      },
-      slidesPerView: 4,
-
-    })
-
-    new Swiper('.swiper')
-    var mySwiper = document.querySelector('.swiper').swiper
-    mySwiper.slideNext();
-  </script>-->
 </body>
 
 </html>

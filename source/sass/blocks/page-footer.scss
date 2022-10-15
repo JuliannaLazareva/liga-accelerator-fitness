@@ -1,0 +1,140 @@
+.page-footer {
+  padding: 40px 103px 37px;
+  color: $color-default-white;
+  background-color: $color-default-black;
+
+  @include vp-1199 {
+    padding: 44px 40px 39px 45px;
+  }
+
+  @include vp-767 {
+    padding: 47px 15px;
+  }
+}
+
+.page-footer__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include vp-767 {
+    flex-direction: column;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+
+  @include vp-374 {
+    margin: 0;
+  }
+}
+
+.page-footer__logo-wrapper {
+  min-width: 100px;
+  margin-top: 5px;
+
+  @include vp-1199 {
+    margin-top: 4px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__logo img {
+  width: 89px;
+  height: auto;
+
+  @include vp-1199 {
+    width: 82px;
+  }
+
+  @include vp-767 {
+    width: 68px;
+  }
+}
+
+.page-footer a {
+  color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+}
+
+.page-footer__nav {
+  display: flex;
+  align-self: flex-start;
+
+  @include vp-767 {
+    margin-bottom: 17px;
+  }
+}
+
+.page-footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.page-footer__nav-list--left-column {
+  margin-right: 20px;
+
+  @include vp-1199 {
+    margin-right: 10px;
+  }
+
+  @include vp-767 {
+    margin-right: 77px;
+  }
+}
+
+.page-footer__nav-list--right-column {
+  @include vp-767 {
+    margin-top: -40px;
+  }
+}
+
+.page-footer__nav-list li {
+  margin-right: 20px;
+
+  @include vp-1199 {
+    margin-right: 10px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 16px;
+  }
+}
+
+.page-footer__nav-list li:last-child {
+  margin-right: 0;
+}
+
+.page-footer__nav-list a {
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include vp-767 {
+    padding: 5px 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.page-footer__social ul {
+  display: grid;
+  grid-template-columns: repeat(3, 25px);
+  gap: 11px;
+}
+
+.page-footer__social svg {
+  fill: $color-default-black;
+}

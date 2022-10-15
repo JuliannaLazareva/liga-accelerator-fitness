@@ -1,0 +1,135 @@
+.contacts {
+  margin: 0 auto;
+  padding: 59px 103px 47px 120px;
+
+  @include vp-1359 {
+    padding: 59px 80px 47px;
+  }
+
+  @include vp-1199 {
+    padding: 67px 89px 42px 121px;
+  }
+
+  @include vp-767 {
+    margin: 0 auto;
+    padding: 66px 15px 42px;
+  }
+
+  @include vp-374 {
+    margin: 0;
+  }
+}
+
+.contacts h2 {
+  margin: 0;
+  margin-bottom: 34px;
+  font-size: 49px;
+  line-height: 64px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-bottom: 36px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 38px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.contacts h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.contacts address,
+.contacts p,
+.contacts a {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+
+  @include vp-1199 {
+    margin-bottom: 21px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.contacts p {
+  margin: 0;
+}
+
+.contacts a {
+  display: block;
+  margin-bottom: 17px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+}
+
+.contacts__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 230px 230px;
+  column-gap: 60px;
+  padding-left: 4px;
+  margin: 0 auto;
+
+  @include vp-1359 {
+    grid-template-columns: 200px 200px;
+    column-gap: 35px;
+  }
+
+  @include vp-1199 {
+    grid-template-columns: 267px 220px;
+    column-gap: 48px;
+    padding-left: 0;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__block:nth-child(1) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 7px;
+    right: -1px;
+    bottom: 23px;
+    width: 0;
+    border-right: 1px solid $color-light-slate-grey;
+    content: "";
+  }
+
+  @include vp-1199 {
+    &::after {
+      bottom: 28px;
+    }
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}

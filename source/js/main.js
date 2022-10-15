@@ -130,10 +130,80 @@ window.addEventListener('DOMContentLoaded', () => {
       },
       320: {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 30,
       },
     },
   });
+
+  // eslint-disable-next-line no-new, no-undef
+  new Swiper('.reviews__slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 100,
+    loop: true,
+  });
+
+  // Валидация телефона
+
+  let phoneInputs = document.querySelectorAll('[type="tel"]');
+
+  let getInputNumbersValue = function (input) {
+    return input.value.replace(/\D/g, '');
+  };
+
+  let onPhoneInput = function (e) {
+    let input = e.target;
+    let inputNumbersValue = getInputNumbersValue(input);
+    let formattedInputValue = '';
+    let selectionStart = input.selectionStart;
+
+
+    if (!inputNumbersValue) {
+      input.value = '';
+      return;
+    }
+
+    if (input.value.length !== selectionStart) {
+      if (e.data && /\D/g.test(e.data)) {
+        input.value = inputNumbersValue;
+      }
+      return;
+    }
+
+    if (inputNumbersValue.indexOf(inputNumbersValue[0]) > -1) {
+      formattedInputValue += inputNumbersValue.substring(0, 16);
+    }
+    input.value = formattedInputValue;
+  };
+
+  let onPhoneKeyDown = function (e) {
+    let inputValue = e.target.value.replace(/\D/g, '');
+    if (e.keyCode === 8 && inputValue.length === 1) {
+      e.target.value = '';
+    }
+  };
+
+  let onPhonePaste = function (e) {
+    let pasted = e.clipboardData || window.clipboardData;
+    let input = e.target;
+    let inputNumbersValue = getInputNumbersValue(input);
+
+    if (pasted) {
+      let pastedText = pasted.getData('Text');
+      if (/\D/g.test(pastedText)) {
+        input.value = inputNumbersValue;
+      }
+    }
+  };
+
+  for (let phoneInput of phoneInputs) {
+    phoneInput.addEventListener('keydown', onPhoneKeyDown);
+    phoneInput.addEventListener('input', onPhoneInput, false);
+    phoneInput.addEventListener('paste', onPhonePaste, false);
+  }
 
 
   iosVhFix();

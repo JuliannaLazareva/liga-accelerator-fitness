@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  padding: 28px 0 50px;
+  padding: 28px 0 40px;
   color: $color-default-white;
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 
@@ -15,6 +15,12 @@
 
 .page-header a {
   color: $color-default-white;
+
+  &:focus,
+  &:hover {
+    opacity: 0.5;
+    outline: none;
+  }
 }
 
 .page-header__logo-wrapper {
@@ -22,8 +28,14 @@
   flex-wrap: wrap;
 }
 
-.page-header__logo-wrapper img {
+.page-header__logo {
   margin-right: auto;
+}
+
+.page-header__logo-wrapper img {
+  width: 89px;
+  height: auto;
+
   @include vp-1199 {
     width: 82px;
   }
@@ -33,7 +45,7 @@
   }
 }
 
-.page-header__logo-wrapper a {
+.page-header__phone {
   margin-left: 10px;
   font-family: $ff-bebas-neue;
   font-size: 26px;

@@ -75,7 +75,7 @@
   margin: 46px 0 9px;
   font-size: 56px;
   line-height: 49px;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.03em;
 
   @include vp-2149 {
     font-size: 52px;
@@ -147,7 +147,13 @@
   }
 }
 
-.gym__text li:nth-child(2) {
+.gym__text li:first-child {
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.gym__text li {
   @include vp-1199 {
     display: none;
   }
@@ -223,7 +229,6 @@
   @include vp-2149 {
     top: -10px;
     left: -25%;
-
   }
 
   @include vp-1919 {

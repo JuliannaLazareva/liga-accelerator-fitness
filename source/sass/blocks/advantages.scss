@@ -1,0 +1,212 @@
+.advantages {
+  padding: 116px 164px 109px;
+  background-color: $color-ghost-white;
+
+  @include vp-1359 {
+    padding-left: 103px;
+    padding-right: 103px;
+  }
+
+  @include vp-1199 {
+    padding: 96px 45px 92px;
+  }
+
+  @include vp-767 {
+    padding: 67px 0 63px;
+  }
+}
+
+.advantages h2 {
+  margin: 0;
+  margin-bottom: 65px;
+  font-size: 49px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-bottom: 46px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.advantages__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 280px;
+  row-gap: 20px;
+  margin-bottom: 250px;
+
+  @include vp-1199 {
+    column-gap: 23px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 162px;
+  padding: 0 0 23px;
+
+  @include vp-1919 {
+    justify-content: flex-end;
+  }
+
+  @include vp-1199 {
+    min-height: 98px;
+    padding-bottom: 15px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.advantages__block--simulators {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 240px;
+  height: 90%;
+  margin-top: 6px;
+  padding: 60px 15px;
+  color: $color-default-white;
+  background-color: $color-resolution-blue;
+  text-align: center;
+
+  @include vp-1199 {
+    position: relative;
+    grid-column: 1/-1;
+    width: 65%;
+    margin-top: 0;
+    padding: 33px 30px 50px;
+    height: 95%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 90%;
+    margin-top: 7px;
+    margin-bottom: 29px;
+    padding-bottom: 35px;
+  }
+}
+
+.advantages__block--comfort,
+.advantages__block--experience {
+  align-items: flex-end;
+}
+
+.advantages__block--area .advantages__text-wrapper,
+.advantages__block--comfort .advantages__text-wrapper {
+  max-width: 220px;
+}
+
+.advantages__block--parking .advantages__text-wrapper,
+.advantages__block--experience .advantages__text-wrapper {
+  max-width: 237px;
+}
+
+.advantages__block h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+
+  @include vp-1199 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.advantages__block p {
+  margin: 0;
+}
+
+.advantages__block--simulators p {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.advantages__block dl {
+  margin-right: 30px;
+  color: $color-persian-blue;
+
+  @include vp-767 {
+    margin: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
+}
+
+.advantages__block--simulators dl {
+  margin: 0;
+  margin-bottom: 30px;
+  color: inherit;
+
+  @include vp-1199 {
+    margin-bottom: 14px;
+  }
+}
+
+.advantages__block dt {
+  font-size: 71px;
+  font-weight: 700;
+  line-height: 65px;
+  background: $red-to-blue;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include vp-1199 {
+    font-size: 58px;
+    line-height: 52px;
+  }
+}
+
+.advantages__block--simulators dt {
+  margin-bottom: 5px;
+  color: $color-default-white;
+  -webkit-text-fill-color: $color-default-white;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+    font-size: 74px;
+    line-height: 74px;
+  }
+}
+
+.advantages__block dd {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.advantages__block--simulators dd {
+  font-size: 26px;
+  line-height: 39px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
