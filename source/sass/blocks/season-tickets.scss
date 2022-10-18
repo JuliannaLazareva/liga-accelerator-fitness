@@ -6,7 +6,7 @@
 
   @include vp-1199 {
     padding-top: 97px;
-    padding-bottom: 100px;
+    padding-bottom: 103px;
   }
 
   @include vp-767 {
@@ -204,7 +204,7 @@
   }
 
   @include vp-767 {
-    gap: 35px;
+    gap: 37px;
   }
 }
 
@@ -216,7 +216,8 @@
   align-items: center;
   min-width: 360px;
   width: 100%;
-  padding: 57px 20px 54px;
+  min-height: 448px;
+  padding: 57px 20px 52px;
   margin: 0 auto;
   background-color: $color-default-white;
   border: 7px solid transparent;
@@ -228,6 +229,7 @@
 
   @include vp-767 {
     min-width: 290px;
+    min-height: 381px;
     padding: 44px 20px 37px;
   }
 
@@ -292,73 +294,45 @@
 
 .season-tickets__list p {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 67px;
   font-size: 16px;
   line-height: 24px;
   z-index: 1;
 
   @include vp-767 {
-    margin-bottom: 11px;
+    margin-bottom: 52px;
   }
 }
 
 .season-tickets__price-list {
   position: relative;
-  margin-bottom: 25px;
 
   @include vp-767 {
     margin-bottom: 27px;
   }
 }
 
-.season-tickets__price-item {
+.season-tickets__price-list span {
   position: relative;
-  min-width: 166px;
+  padding-right: 45px;
   margin: 0 auto;
-}
-
-.season-tickets__price-item:first-child {
-  font-weight: 700;
-  font-size: 100px;
-  line-height: 150px;
-  color: $color-whisper;
-  opacity: 0.8;
-
-  @include vp-767 {
-    font-size: 80px;
-    line-height: 120px;
-  }
-}
-
-.season-tickets__price-item:nth-child(2) {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
   letter-spacing: 0.02em;
+  color: $color-egyptian-blue;
   background: inherit;
 
   @include vp-767 {
-    top: 43px;
+    padding-left: 17px;
     font-size: 48px;
     line-height: 72px;
   }
 }
 
-.season-tickets__price-item:nth-child(2) span {
-  padding-right: 44px;
-
-  @include vp-767 {
-    padding-right: 34px;
-  }
-}
-
-.season-tickets__price-item:nth-child(2)::after {
+.season-tickets__price-list span::after {
   position: absolute;
-  top: 24px;
+  top: 14px;
   right: 0;
   width: 30px;
   height: 42px;
@@ -368,11 +342,36 @@
   content: "";
 
   @include vp-767 {
-    top: 21px;
-    right: 14px;
+    top: 13px;
+    right: 11px;
     width: 24px;
     height: 33px;
   }
+}
+
+.season-tickets__price-list span::before {
+  position: absolute;
+  top: -86%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150px;
+  color: $color-whisper;
+  opacity: 0.8;
+  content: attr(data-index-number);
+  z-index: -1;
+
+  @include vp-767 {
+    font-size: 80px;
+    line-height: 120px;
+  }
+}
+
+.season-tickets__price-item {
+  position: relative;
+  min-width: 166px;
+  margin: 0 auto 10px;
 }
 
 .season-tickets__tabs-panel {

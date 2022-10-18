@@ -1,5 +1,7 @@
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
+/* eslint-disable no-undef */
+/* eslint-disable no-new */
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
 
 // ---------------------------------
 
@@ -107,7 +109,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Slider
 
-  // eslint-disable-next-line no-new
   new Swiper('.trainer__slider', {
     // Стрелки
     navigation: {

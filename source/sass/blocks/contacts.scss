@@ -106,7 +106,7 @@
   }
 }
 
-.contacts__block:nth-child(1) {
+.contacts__block:first-child {
   position: relative;
 
   &::after {

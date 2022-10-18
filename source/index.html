@@ -8,12 +8,9 @@
   <meta name="description" content="Fitness">
   <title>Fitness</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Roboto-Condensed.woff2" as="font" crossorigin="anonymous">
 </head>
-
 <body>
   <div class="wrapper">
     <header class="page-header">
@@ -112,39 +109,34 @@
                       <p>12 занятий</p>
                       <ul class="season-tickets__price-list">
                         <li class="season-tickets__price-item">
-                          <span>5000</span>
-                        </li>
-                        <li class="season-tickets__price-item">
-                          <span>5000</span>
+                          <span data-index-number="5000">5000</span>
                         </li>
                       </ul>
                     </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>Дневной</h3>
-                    <p>с 8:00 до 17:00</p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>1700</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>1700</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>Дневной</h3>
+                      <p>с 8:00 до 17:00</p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="1700">1700</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>Полный день</h3>
-                    <p>с 8:00 до 22:00 </p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>2700</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>2700</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>Полный день</h3>
+                      <p>с 8:00 до 22:00 </p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="2700">2700</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                 </ul>
@@ -152,42 +144,39 @@
               <div class="season-tickets__tabs-panel">
                 <ul class="season-tickets__list">
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>С тренером</h3>
-                    <p>12 занятий</p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>15000</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>15000</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>С тренером</h3>
+                      <p>12 занятий</p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="15000">15000</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>Дневной</h3>
-                    <p>с 8:00 до 17:00</p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>11700</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>11700</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>Дневной</h3>
+                      <p>с 8:00 до 17:00</p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="11700">11700</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>Полный день</h3>
-                    <p>с 8:00 до 22:00 </p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>12700</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>12700</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>Полный день</h3>
+                      <p>с 8:00 до 22:00 </p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="12700">12700</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                 </ul>
@@ -195,42 +184,39 @@
               <div class="season-tickets__tabs-panel" id="content-3">
                 <ul class="season-tickets__list">
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>С тренером</h3>
-                    <p>12 занятий</p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>25000</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>25000</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>С тренером</h3>
+                      <p>12 занятий</p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="25000">25000</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>Дневной</h3>
-                    <p>с 8:00 до 17:00</p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>21700</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>21700</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>Дневной</h3>
+                      <p>с 8:00 до 17:00</p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="21700">21700</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                   <li class="season-tickets__card" tabindex="0">
-                    <h3>Полный день</h3>
-                    <p>с 8:00 до 22:00 </p>
-                    <ul class="season-tickets__price-list">
-                      <li class="season-tickets__price-item">
-                        <span>22700</span>
-                      </li>
-                      <li class="season-tickets__price-item">
-                        <span>22700</span>
-                      </li>
-                    </ul>
+                    <div class="season-tickets__card-wrap">
+                      <h3>Полный день</h3>
+                      <p>с 8:00 до 22:00 </p>
+                      <ul class="season-tickets__price-list">
+                        <li class="season-tickets__price-item">
+                          <span data-index-number="22700">22700</span>
+                        </li>
+                      </ul>
+                    </div>
                     <button class="season-tickets__buy-button btn">купить абонемент</button>
                   </li>
                 </ul>
@@ -658,10 +644,7 @@
       </div>
     </footer>
   </div>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
-
 </html>
