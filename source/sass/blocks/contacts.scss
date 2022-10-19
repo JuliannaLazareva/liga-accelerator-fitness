@@ -1,5 +1,4 @@
 .contacts {
-  margin: 0 auto;
   padding: 59px 103px 47px 120px;
 
   @include vp-1359 {
@@ -7,6 +6,7 @@
   }
 
   @include vp-1199 {
+    margin: 0 auto;
     padding: 67px 89px 42px 121px;
   }
 

@@ -11,7 +11,7 @@
 
   @include vp-767 {
     padding-top: 67px;
-    padding-bottom: 74px;
+    padding-bottom: 69px;
   }
 }
 
@@ -204,7 +204,7 @@
   }
 
   @include vp-767 {
-    gap: 37px;
+    gap: 36px;
   }
 }
 
@@ -229,7 +229,7 @@
 
   @include vp-767 {
     min-width: 290px;
-    min-height: 381px;
+    min-height: 384px;
     padding: 44px 20px 37px;
   }
 
@@ -306,6 +306,7 @@
 
 .season-tickets__price-list {
   position: relative;
+  list-style-type: none;
 
   @include vp-767 {
     margin-bottom: 27px;

@@ -1,12 +1,18 @@
 .reviews {
+  max-width: 1366px;
+  margin: 0 auto;
   padding: 65px 330px 120px;
 
+  @include vp-1359 {
+    padding: 65px 250px 120px;
+  }
+
   @include vp-1199 {
-    padding: 62px 28px 100px;
+    padding: 62px 28px 99px;
   }
 
   @include vp-767 {
-    padding: 37px 0 70px;
+    padding: 37px 0 71px;
   }
 }
 
@@ -25,6 +31,7 @@
   }
 
   @include vp-767 {
+    margin-bottom: 46px;
     font-size: 32px;
     line-height: 32px;
   }
@@ -57,7 +64,7 @@
     grid-template-columns: 80px auto;
     column-gap: 16px;
     row-gap: 14px;
-    padding: 39px 25px 35px 29px;
+    padding: 36px 25px 35px 29px;
   }
 }
 

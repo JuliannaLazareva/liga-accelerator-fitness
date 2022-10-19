@@ -8,7 +8,7 @@
   }
 
   @include vp-1199 {
-    padding: 96px 45px 80px;
+    padding: 96px 45px 77px;
   }
 
   @include vp-767 {
@@ -42,28 +42,29 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 280px;
   row-gap: 20px;
+  max-width: 1260px;
+  margin: 0 auto;
 
   @include vp-1199 {
     column-gap: 23px;
+    row-gap: 22px;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    row-gap: 20px;
   }
 }
 
 .advantages__block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   min-height: 162px;
   padding: 0 0 23px;
 
-  @include vp-1919 {
-    justify-content: flex-end;
-  }
-
   @include vp-1199 {
+    justify-content: center;
     min-height: 98px;
     padding-bottom: 15px;
   }
@@ -95,8 +96,8 @@
     grid-column: 1/-1;
     width: 65%;
     margin-top: 0;
-    padding: 47px 30px 38px;
-    height: 95%;
+    padding: 41px 30px 45px;
+    height: 94%;
   }
 
   @include vp-767 {

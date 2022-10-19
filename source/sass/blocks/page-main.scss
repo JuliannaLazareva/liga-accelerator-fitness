@@ -1,24 +1,25 @@
 .page-main {
   position: relative;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.page-main__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   max-width: 395px;
   padding-top: 109px;
   padding-bottom: 43px;
-  margin-left: auto;
-  margin-right: 867px;
   color: $color-default-white;
   text-align: right;
 
-  @include vp-1359 {
-    margin-right: 600px;
-  }
-
   @include vp-1199 {
     max-width: 325px;
-    margin-right: 398px;
-    padding-top: 71px;
+    margin-left: auto;
+    margin-right: 353px;
+    padding-top: 68px;
     padding-bottom: 54px;
   }
 
@@ -27,11 +28,11 @@
     flex-direction: column;
     align-items: stretch;
     margin-right: 0;
-    padding: 71px 15px 29px;
+    padding: 71px 0 29px;
   }
 }
 
-.page-main::after {
+.page-main__wrapper::after {
   position: absolute;
   top: -3px;
   left: 459px;
@@ -47,7 +48,7 @@
   }
 
   @include vp-1199 {
-    top: 21px;
+    top: 19px;
     left: 354px;
     width: 324px;
     height: 390px;
@@ -56,6 +57,7 @@
   }
 
   @include vp-767 {
+    display: none;
     background-image: none;
     background-size: 0;
   }
@@ -104,6 +106,7 @@
   max-width: 200px;
   left: -263px;
   top: -84px;
+  list-style-type: none;
 
   @include vp-1199 {
     left: -212px;

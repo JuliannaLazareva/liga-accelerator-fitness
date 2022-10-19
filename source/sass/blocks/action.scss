@@ -1,5 +1,7 @@
 .action {
-  padding: 115px 103px 50px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 115px 50px 50px;
 
   @include vp-1199 {
     padding: 97px 45px 35px;
@@ -82,7 +84,7 @@
   flex-direction: column;
   align-items: flex-start;
   min-height: 211px;
-  padding: 25px 28px 28px;
+  padding: 25px 28px 18px;
   border: 7px solid $color-crimson;
   border-image: $border-action;
   border-image-slice: 1;
@@ -99,15 +101,19 @@
 }
 
 .action__card--main {
-  padding: 35px 45px 45px;
+  padding: 35px 45px 36px;
   border: none;
 
   @include vp-1199 {
+    max-width: 350px;
     padding: 35px 44px 36px;
   }
 
   @include vp-767 {
+    max-width: 250px;
     min-height: 299px;
+    margin: 0 auto;
+    padding-bottom: 34px;
   }
 }
 
@@ -177,6 +183,9 @@
   }
 
   @include vp-1199 {
+    max-width: 399px;
+    margin-left: auto;
+    background-size: contain;
     background-image: url("../img/action_tablet.jpg");
 
     @include retina {
@@ -185,12 +194,18 @@
   }
 
   @include vp-767 {
-    height: 299px;
+    height: 750px;
+    max-width: 100%;
+    background-size: cover;
     background-image: url("../img/action_mobile@2x.jpg");
 
     @include retina {
       background-image: url("../img/action_mobile@2x.jpg");
     }
+  }
+
+  @include vp-374 {
+    height: 299px;
   }
 }
 

@@ -1,7 +1,9 @@
 .super-games {
   display: flex;
   width: 100%;
-  padding: 120px 103px 40px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 120px 50px 40px;
 
   @include vp-1359 {
     padding: 120px 35px;
@@ -18,9 +20,13 @@
 }
 
 .super-games__wrapper {
-  width: 100%;
+  width: 500px;
   color: $color-default-white;
   background-color: $color-torch-red;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .super-games__content {
@@ -63,7 +69,7 @@
 }
 
 .super-games__content dl {
-  margin-left: 43px;
+  margin-left: 53px;
   margin-top: 2px;
 
   @include vp-1199 {
@@ -118,6 +124,7 @@
 .super-games__content ul {
   padding-top: 8px;
   padding-left: 7px;
+  list-style-type: none;
 
   @include vp-1199 {
     padding-top: 4px;
@@ -149,21 +156,13 @@
 }
 
 .super-games__image {
-  width: 100%;
-  min-width: 660px;
+  width: 660px;
   background-color: #000145;
 
-  @include vp-1359 {
-    min-width: 635px;
-  }
-
-  @include vp-1199 {
-    min-width: 386px;
-  }
-
   @include vp-767 {
-    min-width: 100%;
+    width: 100%;
     height: 392px;
+    overflow: hidden;
   }
 
   @include vp-374 {
@@ -176,8 +175,11 @@
   height: 100%;
   margin-left: auto;
   object-fit: cover;
-}
 
+  @include vp-767 {
+    height: 114%;
+  }
+}
 
 .super-games__button {
   margin-bottom: 10px;

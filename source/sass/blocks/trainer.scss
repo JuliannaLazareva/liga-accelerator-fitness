@@ -1,4 +1,6 @@
 .trainer {
+  max-width: 1366px;
+  margin: 0 auto;
   padding: 76px 30px 119px;
 
   @include vp-1199 {
@@ -37,6 +39,10 @@
   padding: 0 39px;
   margin: 0 34px;
   overflow: hidden;
+
+  @include vp-1359 {
+    padding: 0 28px;
+  }
 
   @include vp-1199 {
     padding: 0 29px;
@@ -148,13 +154,14 @@
 
   @include vp-767 {
     width: 226px;
+    margin: 0 auto;
   }
 }
 
 .trainer__info {
   position: absolute;
   bottom: 12px;
-  width: 260px;
+  width: inherit;
   padding: 52px 10px 10px;
   text-align: center;
   color: $color-default-white;
@@ -166,6 +173,8 @@
   }
 
   @include vp-767 {
+    left: 50%;
+    transform: translate(-50%);
     width: 226px;
     padding: 42px 8px 10px 10px;
   }

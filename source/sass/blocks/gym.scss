@@ -3,7 +3,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 120px 103px 165px 163px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 120px 49px 165px 110px;
 
   @include vp-1359 {
     padding: 120px 45px;
@@ -16,7 +18,7 @@
   }
 
   @include vp-767 {
-    padding: 22px 0 0;
+    padding: 20px 0 0;
   }
 }
 
@@ -38,20 +40,8 @@
 }
 
 .gym__text {
-  max-width: 620px;
+  max-width: 365px;
   margin-right: 70px;
-
-  @include vp-2149 {
-    max-width: 510px;
-  }
-
-  @include vp-1919 {
-    max-width: 375px;
-  }
-
-  @include vp-1439 {
-    max-width: 365px;
-  }
 
   @include vp-1359 {
     max-width: 330px;
@@ -73,24 +63,18 @@
 
 .gym__text h2 {
   margin: 46px 0 9px;
-  font-size: 56px;
+  font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
 
-  @include vp-2149 {
-    font-size: 52px;
-  }
-
-  @include vp-1919 {
-    font-size: 49px;
-  }
-
   @include vp-1199 {
+    margin-bottom: 11px;
     font-size: 42px;
     line-height: 42px;
   }
 
   @include vp-767 {
+    margin-bottom: 8px;
     font-size: 32px;
     line-height: 32px;
   }
@@ -100,16 +84,11 @@
   margin: 0;
   margin-bottom: 38px;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 27px;
 
-  @include vp-2149 {
-    font-size: 20px;
-  }
-
-  @include vp-1919 {
-    margin-bottom: 38px;
-    font-size: 18px;
+  @include vp-1199 {
+    margin-bottom: 35px;
   }
 
   @include vp-767 {
@@ -121,21 +100,9 @@
   margin: 0;
   margin-bottom: 8px;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.01em;
-
-  @include vp-2149 {
-    font-size: 18px;
-  }
-
-  @include vp-1919 {
-    font-size: 16px;
-  }
-
-  @include vp-1439 {
-    font-size: 16px;
-  }
 
   @include vp-1199 {
     margin-bottom: 44px;
@@ -165,34 +132,15 @@
 }
 
 .gym video {
-  width: 546px;
-  height: 342px;
+  width: 364px;
+  height: 228px;
+  left: -37%;
   position: absolute;
-  top: -360px;
-  left: -50%;
-  transform: translate(-50%);
+  top: -113px;
+  transform: translate(50%);
   background-color: rgba(20, 54, 122, 0.5);
   object-fit: cover;
   z-index: 5;
-
-  @include vp-2149 {
-    top: -150px;
-    left: -25%;
-  }
-
-  @include vp-1919 {
-    top: -113px;
-    left: -55%;
-    transform: translate(50%);
-    width: 455px;
-    height: 285px;
-  }
-
-  @include vp-1439 {
-    width: 364px;
-    height: 228px;
-    left: -37%;
-  }
 
   @include vp-1199 {
     width: 266px;
@@ -217,30 +165,15 @@
 
 .gym__video-button {
   position: absolute;
-  top: -233px;
-  left: -50%;
-  transform: translate(-50%);
+  top: -49px;
+  left: 3%;
+  transform: translate(50%);
   width: 100px;
   height: 100px;
+  background-image: url("img/video_button.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 5;
-
-  @include vp-2149 {
-    top: -10px;
-    left: -25%;
-  }
-
-  @include vp-1919 {
-    top: 6px;
-    left: -2%;
-    transform: translate(50%);
-  }
-
-  @include vp-1439 {
-    top: -49px;
-    left: 3%;
-  }
 
   @include vp-1199 {
     top: -38px;

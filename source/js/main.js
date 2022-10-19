@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   videoEl.addEventListener('pause', function () {
 
-    playBtn.style.backgroundImage = 'url(../img/video_button.svg)';
+    playBtn.style.backgroundImage = 'url(img/video_button.svg)';
   }, false);
 
   videoEl.addEventListener('ended', function () {
@@ -116,9 +116,6 @@ window.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev',
     },
 
-    // Бесконечная прокрутка
-    loop: true,
-
     // Адаптивность
     breakpoints: {
       1200: {
@@ -136,7 +133,6 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  // eslint-disable-next-line no-new, no-undef
   new Swiper('.reviews__slider', {
     navigation: {
       nextEl: '.swiper-button-next',
@@ -144,7 +140,6 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     slidesPerView: 1,
     spaceBetween: 100,
-    loop: true,
   });
 
   // Валидация телефона
@@ -175,7 +170,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (inputNumbersValue.indexOf(inputNumbersValue[0]) > -1) {
-      formattedInputValue += inputNumbersValue.substring(0, 16);
+      formattedInputValue += '+' + inputNumbersValue.substring(0, 16);
     }
     input.value = formattedInputValue;
   };

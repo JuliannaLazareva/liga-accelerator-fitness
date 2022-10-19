@@ -1,26 +1,26 @@
 .page-header {
   position: relative;
-  padding: 28px 0 40px;
+  padding: 28px 103px 40px;
   color: $color-default-white;
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 
   @include vp-1199 {
-    padding-top: 36px;
+    padding: 38px 45px 41px;
   }
 
   @include vp-767 {
-    padding-top: 18px;
+    padding: 18px 15px 40px;
   }
+}
+
+.page-header__wrapper {
+  position: relative;
+  max-width: 1260px;
+  margin: 0 auto;
 }
 
 .page-header a {
   color: $color-default-white;
-
-  &:focus,
-  &:hover {
-    opacity: 0.5;
-    outline: none;
-  }
 }
 
 .page-header__logo-wrapper {
@@ -62,17 +62,27 @@
     line-height: 20px;
     letter-spacing: 0.02em;
   }
+
+  &:focus,
+  &:hover {
+    opacity: 0.5;
+    outline: none;
+  }
 }
 
 .page-header__social-wrapper {
   position: absolute;
-  right: 92px;
-  bottom: 81px;
+  right: -10px;
+  bottom: 41px;
   text-align: right;
 
   @include vp-1199 {
     display: none;
   }
+}
+
+.page-header__social-list {
+  list-style-type: none;
 }
 
 .page-header__social-wrapper a {
@@ -81,4 +91,10 @@
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
+
+  &:focus,
+  &:hover {
+    opacity: 0.5;
+    outline: none;
+  }
 }

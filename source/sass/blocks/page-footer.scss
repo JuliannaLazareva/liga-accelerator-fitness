@@ -17,6 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  max-width: 1260px;
+  margin: 0 auto;
 
   @include vp-767 {
     flex-direction: column;
@@ -77,6 +79,7 @@
 .page-footer__nav-list {
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
 
   @include vp-767 {
     flex-direction: column;
@@ -133,6 +136,7 @@
   display: grid;
   grid-template-columns: repeat(3, 25px);
   gap: 11px;
+  list-style-type: none;
 }
 
 .page-footer__social svg {
