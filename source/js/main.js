@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-new */
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
 
 // ---------------------------------
 
@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   videoEl.addEventListener('pause', function () {
 
-    playBtn.style.backgroundImage = 'url(img/video_button.svg)';
+    playBtn.style.backgroundImage = 'url("img/video_button.svg")';
   }, false);
 
   videoEl.addEventListener('ended', function () {
@@ -145,6 +145,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Валидация телефона
 
   let phoneInputs = document.querySelectorAll('[type="tel"]');
+  let form = document.querySelector('.promo__form');
 
   let getInputNumbersValue = function (input) {
     return input.value.replace(/\D/g, '');
@@ -155,7 +156,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let inputNumbersValue = getInputNumbersValue(input);
     let formattedInputValue = '';
     let selectionStart = input.selectionStart;
-
 
     if (!inputNumbersValue) {
       input.value = '';
@@ -170,9 +170,30 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     if (inputNumbersValue.indexOf(inputNumbersValue[0]) > -1) {
-      formattedInputValue += '+' + inputNumbersValue.substring(0, 16);
+      formattedInputValue = '+7' + ' ';
+      if (inputNumbersValue.length > 1) {
+        formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+      }
+      if (inputNumbersValue.length >= 5) {
+        formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+      }
+      if (inputNumbersValue.length >= 8) {
+        formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
+      }
+      if (inputNumbersValue.length >= 10) {
+        formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
+      }
     }
+
     input.value = formattedInputValue;
+
+    form.onsubmit = function () {
+      if (input.value.length < 18) {
+        return false;
+      } else {
+        return true;
+      }
+    };
   };
 
   let onPhoneKeyDown = function (e) {
@@ -186,7 +207,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let pasted = e.clipboardData || window.clipboardData;
     let input = e.target;
     let inputNumbersValue = getInputNumbersValue(input);
-
     if (pasted) {
       let pastedText = pasted.getData('Text');
       if (/\D/g.test(pastedText)) {

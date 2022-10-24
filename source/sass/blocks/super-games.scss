@@ -46,12 +46,12 @@
 .super-games__text {
   display: flex;
   flex-wrap: wrap;
-  max-width: 400px;
+  min-width: 400px;
   margin-bottom: 4px;
   z-index: 1;
 
   @include vp-1199 {
-    max-width: 200px;
+    min-width: 200px;
     margin-bottom: 1px;
   }
 }

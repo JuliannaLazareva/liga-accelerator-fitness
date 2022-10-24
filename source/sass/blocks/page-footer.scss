@@ -1,14 +1,14 @@
 .page-footer {
-  padding: 40px 103px 37px;
+  padding: 40px 103px 23px;
   color: $color-default-white;
   background-color: $color-default-black;
 
   @include vp-1199 {
-    padding: 44px 40px 39px 45px;
+    padding: 44px 40px 26px 45px;
   }
 
   @include vp-767 {
-    padding: 47px 15px;
+    padding: 47px 15px 45px;
   }
 }
 
@@ -32,16 +32,44 @@
 }
 
 .page-footer__logo-wrapper {
+  //min-width: 100px;
   min-width: 100px;
   margin-top: 5px;
+  margin-right: auto;
+  margin-bottom: 20px;
 
   @include vp-1199 {
     margin-top: 4px;
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin-bottom: 0;
   }
+}
+
+.page-footer__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include vp-1199 {
+    margin-right: 9px;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 56px;
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.page-footer__container div:last-of-type {
+  margin-right: auto;
 }
 
 .page-footer__logo img {
@@ -68,59 +96,36 @@
 }
 
 .page-footer__nav {
-  display: flex;
-  align-self: flex-start;
-
-  @include vp-767 {
-    margin-bottom: 17px;
-  }
-}
-
-.page-footer__nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-
-  @include vp-767 {
-    flex-direction: column;
-  }
-}
-
-.page-footer__nav-list--left-column {
   margin-right: 20px;
 
   @include vp-1199 {
     margin-right: 10px;
   }
+}
 
-  @include vp-767 {
-    margin-right: 77px;
+@include vp-767 {
+  .page-footer__nav--action {
+    order: 1;
+  }
+
+  .page-footer__nav--services {
+    order: 2;
+  }
+
+  .page-footer__nav--trainer {
+    order: 3;
+  }
+
+  .page-footer__nav--season-ticket {
+    order: 4;
+  }
+
+  .page-footer__nav--schedule {
+    order: 5;
   }
 }
 
-.page-footer__nav-list--right-column {
-  @include vp-767 {
-    margin-top: -40px;
-  }
-}
-
-.page-footer__nav-list li {
-  margin-right: 20px;
-
-  @include vp-1199 {
-    margin-right: 10px;
-  }
-
-  @include vp-767 {
-    margin: 0 0 16px;
-  }
-}
-
-.page-footer__nav-list li:last-child {
-  margin-right: 0;
-}
-
-.page-footer__nav-list a {
+.page-footer__nav a {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 16px;

@@ -145,6 +145,7 @@
 
 .trainer__slide img {
   width: 260px;
+  margin: 0 auto;
   object-fit: cover;
 
   @include vp-1199 {
@@ -154,13 +155,14 @@
 
   @include vp-767 {
     width: 226px;
-    margin: 0 auto;
   }
 }
 
 .trainer__info {
   position: absolute;
+  left: 50%;
   bottom: 12px;
+  transform: translate(-50%);
   width: inherit;
   padding: 52px 10px 10px;
   text-align: center;
@@ -173,8 +175,6 @@
   }
 
   @include vp-767 {
-    left: 50%;
-    transform: translate(-50%);
     width: 226px;
     padding: 42px 8px 10px 10px;
   }

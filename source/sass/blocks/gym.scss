@@ -121,6 +121,8 @@
 }
 
 .gym__text li {
+  list-style-type: none;
+
   @include vp-1199 {
     display: none;
   }
@@ -170,9 +172,11 @@
   transform: translate(50%);
   width: 100px;
   height: 100px;
+  background-color: inherit;
   background-image: url("img/video_button.svg");
   background-repeat: no-repeat;
   background-size: 100%;
+  border: none;
   z-index: 5;
 
   @include vp-1199 {

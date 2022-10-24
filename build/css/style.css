@@ -1300,12 +1300,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   scroll-behavior: smooth;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Non-prefixed version, currently
-                                  //not supported by any browser */
 }
 
 body {
@@ -1534,6 +1528,10 @@ button,
   background-color: transparent;
   border: 4px solid #ffffff;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -1859,6 +1857,10 @@ button,
   letter-spacing: -0.01em;
 }
 
+.gym__text li {
+  list-style-type: none;
+}
+
 .gym__video-wrapper {
   position: relative;
   padding-bottom: 70px;
@@ -1888,9 +1890,11 @@ button,
   transform: translate(50%);
   width: 100px;
   height: 100px;
+  background-color: inherit;
   background-image: url("img/video_button.svg");
   background-repeat: no-repeat;
   background-size: 100%;
+  border: none;
   z-index: 5;
 }
 
@@ -2162,7 +2166,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 400px;
+  min-width: 400px;
   margin-bottom: 4px;
   z-index: 1;
 }
@@ -2317,13 +2321,18 @@ button,
 
 .trainer__slide img {
   width: 260px;
+  margin: 0 auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .trainer__info {
   position: absolute;
+  left: 50%;
   bottom: 12px;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
   width: inherit;
   padding: 52px 10px 10px;
   text-align: center;
@@ -2569,6 +2578,7 @@ button,
 
 .action__card p {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 22px;
 }
@@ -2643,6 +2653,7 @@ button,
   -moz-column-gap: 9px;
   column-gap: 9px;
   row-gap: 6px;
+  min-height: 242px;
   padding: 57px 55px 53px 62px;
   color: #ffffff;
   background-color: #1c3374;
@@ -2680,6 +2691,11 @@ button,
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   margin: 0;
+}
+
+.reviews__button.swiper-button-prev,
+.reviews__button.swiper-button-next {
+  top: 120px;
 }
 
 .reviews__button.swiper-button-prev::after,
@@ -2792,7 +2808,7 @@ button,
 }
 
 .contacts {
-  padding: 59px 103px 47px 120px;
+  padding: 59px 38px 47px 120px;
 }
 
 .contacts h2 {
@@ -2861,7 +2877,7 @@ button,
 }
 
 .page-footer {
-  padding: 40px 103px 37px;
+  padding: 40px 103px 23px;
   color: #ffffff;
   background-color: #030a1a;
 }
@@ -2884,6 +2900,24 @@ button,
 .page-footer__logo-wrapper {
   min-width: 100px;
   margin-top: 5px;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.page-footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.page-footer__container div:last-of-type {
+  margin-right: auto;
 }
 
 .page-footer__logo img {
@@ -2902,35 +2936,10 @@ button,
 }
 
 .page-footer__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-}
-
-.page-footer__nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  list-style-type: none;
-}
-
-.page-footer__nav-list--left-column {
   margin-right: 20px;
 }
 
-.page-footer__nav-list li {
-  margin-right: 20px;
-}
-
-.page-footer__nav-list li:last-child {
-  margin-right: 0;
-}
-
-.page-footer__nav-list a {
+.page-footer__nav a {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 16px;
@@ -3293,7 +3302,7 @@ button,
   }
 
   .super-games__text {
-    max-width: 200px;
+    min-width: 200px;
     margin-bottom: 1px;
   }
 
@@ -3598,22 +3607,22 @@ button,
   }
 
   .page-footer {
-    padding: 44px 40px 39px 45px;
+    padding: 44px 40px 26px 45px;
   }
 
   .page-footer__logo-wrapper {
     margin-top: 4px;
   }
 
+  .page-footer__container {
+    margin-right: 9px;
+  }
+
   .page-footer__logo img {
     width: 82px;
   }
 
-  .page-footer__nav-list--left-column {
-    margin-right: 10px;
-  }
-
-  .page-footer__nav-list li {
+  .page-footer__nav {
     margin-right: 10px;
   }
 }
@@ -3878,14 +3887,9 @@ button,
 
   .trainer__slide img {
     width: 226px;
-    margin: 0 auto;
   }
 
   .trainer__info {
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    transform: translate(-50%);
     width: 226px;
     padding: 42px 8px 10px 10px;
   }
@@ -4020,6 +4024,7 @@ button,
     -moz-column-gap: 16px;
     column-gap: 16px;
     row-gap: 14px;
+    min-height: 335px;
     padding: 36px 25px 35px 29px;
   }
 
@@ -4110,7 +4115,7 @@ button,
   }
 
   .page-footer {
-    padding: 47px 15px;
+    padding: 47px 15px 45px;
   }
 
   .page-footer__wrapper {
@@ -4125,37 +4130,62 @@ button,
   }
 
   .page-footer__logo-wrapper {
-    margin-bottom: 20px;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    margin-bottom: 0;
+  }
+
+  .page-footer__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 56px;
+    -moz-column-gap: 56px;
+    column-gap: 56px;
+    row-gap: 16px;
+    margin-bottom: 32px;
   }
 
   .page-footer__logo img {
     width: 68px;
   }
 
-  .page-footer__nav {
-    margin-bottom: 17px;
+  .page-footer__nav--action {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
   }
 
-  .page-footer__nav-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .page-footer__nav--services {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
 
-  .page-footer__nav-list--left-column {
-    margin-right: 77px;
+  .page-footer__nav--trainer {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
   }
 
-  .page-footer__nav-list--right-column {
-    margin-top: -40px;
+  .page-footer__nav--season-ticket {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
   }
 
-  .page-footer__nav-list li {
-    margin: 0 0 16px;
+  .page-footer__nav--schedule {
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
   }
 
-  .page-footer__nav-list a {
+  .page-footer__nav a {
     padding: 5px 0;
     font-size: 16px;
     line-height: 19px;
@@ -4187,6 +4217,11 @@ button,
 
   .action__image {
     height: 299px;
+  }
+
+  .reviews__button.swiper-button-prev,
+  .reviews__button.swiper-button-next {
+    top: 170px;
   }
 
   .promo {

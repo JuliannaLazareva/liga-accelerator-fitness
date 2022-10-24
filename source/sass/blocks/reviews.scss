@@ -51,6 +51,7 @@
   grid-template-rows: 30px auto;
   column-gap: 9px;
   row-gap: 6px;
+  min-height: 242px;
   padding: 57px 55px 53px 62px;
   color: $color-default-white;
   background-color: $color-resolution-blue;
@@ -64,6 +65,7 @@
     grid-template-columns: 80px auto;
     column-gap: 16px;
     row-gap: 14px;
+    min-height: 335px;
     padding: 36px 25px 35px 29px;
   }
 }
@@ -111,6 +113,15 @@
     grid-row: 2/3;
     line-height: 22px;
     text-align: center;
+  }
+}
+
+.reviews__button.swiper-button-prev,
+.reviews__button.swiper-button-next {
+  top: 120px;
+
+  @include vp-374 {
+    top: 170px;
   }
 }
 
