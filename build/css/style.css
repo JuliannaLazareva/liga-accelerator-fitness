@@ -2913,26 +2913,12 @@ button,
 }
 
 .page-footer__logo-wrapper {
-  min-width: 100px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   margin-top: 5px;
-  margin-right: auto;
+  margin-right: 7px;
   margin-bottom: 20px;
-}
-
-.page-footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.page-footer__container div:last-of-type {
-  margin-right: auto;
 }
 
 .page-footer__logo img {
@@ -2950,11 +2936,25 @@ button,
   outline: none;
 }
 
-.page-footer__nav {
+.page-footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.page-footer__nav-item {
   margin-right: 20px;
 }
 
-.page-footer__nav a {
+.page-footer__nav-item:last-child {
+  margin-right: 0;
+}
+
+.page-footer__nav-list a {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 16px;
@@ -3634,16 +3634,25 @@ button,
     margin-top: 4px;
   }
 
-  .page-footer__container {
-    margin-right: 9px;
-  }
-
   .page-footer__logo img {
     width: 82px;
   }
 
-  .page-footer__nav {
-    margin-right: 10px;
+  .page-footer__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .page-footer__nav-list a {
+    padding: 5px;
   }
 }
 
@@ -4150,6 +4159,7 @@ button,
   }
 
   .page-footer__logo-wrapper {
+    position: absolute;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
@@ -4159,53 +4169,28 @@ button,
     margin-bottom: 0;
   }
 
-  .page-footer__container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 56px;
-    -moz-column-gap: 56px;
-    column-gap: 56px;
-    row-gap: 16px;
-    margin-bottom: 32px;
-  }
-
   .page-footer__logo img {
     width: 68px;
   }
 
-  .page-footer__nav--action {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+  .page-footer__nav-list {
+    display: block;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    margin-bottom: 25px;
   }
 
-  .page-footer__nav--services {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
+  .page-footer__nav-item {
+    margin-top: 16px;
   }
 
-  .page-footer__nav--trainer {
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
+  .page-footer__nav-item:first-child {
+    margin-top: 38px;
+    margin-right: 100px;
   }
 
-  .page-footer__nav--season-ticket {
-    -webkit-box-ordinal-group: 5;
-    -ms-flex-order: 4;
-    order: 4;
-  }
-
-  .page-footer__nav--schedule {
-    -webkit-box-ordinal-group: 6;
-    -ms-flex-order: 5;
-    order: 5;
-  }
-
-  .page-footer__nav a {
+  .page-footer__nav-list a {
     padding: 5px 0;
     font-size: 16px;
     line-height: 19px;

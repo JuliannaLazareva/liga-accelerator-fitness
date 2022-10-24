@@ -83,8 +83,8 @@
   bottom: 0;
   width: 340px;
   height: 2px;
-  background-color:  rgba(209, 10, 66, 0.2);
-  content: '';
+  background-color: rgba(209, 10, 66, 0.2);
+  content: "";
 
   @include vp-1199 {
     display: none;

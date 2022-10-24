@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-new */
-import { iosVhFix } from './utils/ios-vh-fix';
-import { initModals } from './modules/modals/init-modals';
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
 
 // ---------------------------------
 
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const videoEl = document.querySelectorAll('video')[0];
   const playBtn = document.querySelector('.gym__video-button');
   const vidControls = document.querySelector('.gym__video-controls');
-  playBtn.style.backgroundImage = 'url(../img/video_button.svg)';
+  playBtn.style.backgroundImage = 'url("img/video_button.svg")';
 
   // если браузер может воспроизводить видео удаляем класс
   videoEl.addEventListener('canplaythrough', function () {
@@ -34,11 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
   videoEl.addEventListener('play', function () {
 
     playBtn.style.backgroundImage = 'none';
-  }, false);
-
-  videoEl.addEventListener('pause', function () {
-
-    playBtn.style.backgroundImage = 'url("img/video_button.svg")';
+    videoEl.setAttribute('controls', 'controls');
   }, false);
 
   videoEl.addEventListener('ended', function () {
