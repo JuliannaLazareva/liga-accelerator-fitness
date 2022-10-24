@@ -2386,6 +2386,7 @@ button,
 }
 
 .advantages__block {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2396,6 +2397,20 @@ button,
   justify-content: flex-end;
   min-height: 162px;
   padding: 0 0 23px;
+}
+
+.advantages__block--area::after,
+.advantages__block--parking::after {
+  position: absolute;
+  bottom: 0;
+  width: 340px;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+  content: '';
+}
+
+.advantages__block--area::after {
+  right: 40px;
 }
 
 .advantages__block--simulators {
@@ -3432,6 +3447,11 @@ button,
     justify-content: center;
     min-height: 98px;
     padding-bottom: 15px;
+  }
+
+  .advantages__block--area::after,
+  .advantages__block--parking::after {
+    display: none;
   }
 
   .advantages__block--simulators {

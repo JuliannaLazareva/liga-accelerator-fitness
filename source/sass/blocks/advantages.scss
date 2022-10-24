@@ -57,6 +57,7 @@
 }
 
 .advantages__block {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -74,6 +75,24 @@
     align-items: center;
     text-align: center;
   }
+}
+
+.advantages__block--area::after,
+.advantages__block--parking::after {
+  position: absolute;
+  bottom: 0;
+  width: 340px;
+  height: 2px;
+  background-color:  rgba(209, 10, 66, 0.2);
+  content: '';
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.advantages__block--area::after {
+  right: 40px;
 }
 
 .advantages__block--simulators {
