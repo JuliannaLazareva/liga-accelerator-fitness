@@ -178,6 +178,7 @@
   background-size: 100%;
   border: none;
   z-index: 5;
+  cursor: pointer;
 
   @include vp-1199 {
     top: -38px;
@@ -197,5 +198,9 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -35%);
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 }

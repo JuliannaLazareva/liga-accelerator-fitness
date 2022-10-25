@@ -1896,6 +1896,11 @@ button,
   background-size: 100%;
   border: none;
   z-index: 5;
+  cursor: pointer;
+}
+
+.gym__video-button:hover {
+  opacity: 0.8;
 }
 
 .season-tickets {
